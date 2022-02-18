@@ -1,6 +1,6 @@
 ---
 - name: stat command test
-  hosts: 172.30.1.44
+  hosts: 172.30.1.24
   tasks:
   - name: Get stats of a file
     ansible.builtin.stat:
