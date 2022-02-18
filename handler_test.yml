@@ -1,0 +1,13 @@
+---
+- name: handler test
+  hosts: all
+  handlers:
+    - name: stop message
+      debug:
+        msg: stop play
+
+  tasks:
+    - name: excute ls
+      shell: ls
+      notify: 
+        - stop message
