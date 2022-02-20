@@ -1,6 +1,6 @@
 ---
 - name: loop test
-  hosts: 121.189.77.180
+  hosts: 112.172.54.131
   gather_facts: False
   tasks:
   - name: shell command - /usr/bin/foo
