@@ -8,8 +8,13 @@
         name: nginx
         state: latest
         update_cache: True
-      notfiy:
+      notify:
         - Start Nginx
+
+    - name: Remove nginx
+      apt:
+        name: nginx
+        state: absent
 
   handlers:
     - name: Start Nginx
