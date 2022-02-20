@@ -16,6 +16,6 @@
   - debug:
       msg: "{{ message }}"
   - debug:
-      msg: "{{ hu }}"
+      msg: "{{ hi }}"
   - debug:
       msg: "{{ hello }}"
