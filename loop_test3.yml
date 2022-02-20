@@ -1,4 +1,5 @@
 ---
+# 중첩 목록 사용 loop
 - name: loop test
   hosts: 121.189.77.180
   gather_facts: False

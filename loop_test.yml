@@ -1,13 +1,12 @@
 ---
+# 기본 loop 이용
 - name: loop test
   hosts: 121.189.77.180
   gather_facts: False
   tasks:
   - debug:
-      msg: "{{ item.user }} - {{ item.group }}"
+      msg: "{{ item }} "
     loop:
-    - user: user1
-      group: group1
-    - user: user2
-      group: group2
-    
+    - a
+    - b
+    - c
