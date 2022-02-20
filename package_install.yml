@@ -3,14 +3,25 @@
   hosts: 121.189.77.180
   gather_facts: False
   tasks:
+  - name: Collect only selected facts
+    setup:
+      filter:
+      - 'ansible_distribution'
+
+  - debug:
+      var=ansible_facts
+
   - name: Install Apache2 package
     apt:
+      upgrade: yes
+      update_cache: yes
       name: apache2, php
       state: present
-    when: ansible_facts[ "os_family" ] == "Debian"
+      ignore_error: True
+    when: ansible_facts[ "distribution" ] == "Ubuntu"
 
   - name: Install Httpd package
     yum:
       name: httpd, php
       state: present
-    when: ansible_facts[ "os_family" ] == "Redhat"
+    when: ansible_facts[ "distribution" ] == "Redhat"
