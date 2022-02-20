@@ -4,21 +4,23 @@
   tasks:
     - name: excute ls
       shell: ls
-      vars:
-        taskname: ls
       notify: 
-        - stop message
+        - "my handler"
 
     - name: status sshd
       shell: systemctl status sshd
-      vars:
-        taskname: sshd
       notify:
-        - stop message
+        - "my handler"
 
   handlers:
+    - name: echo
+      debug:
+        msg: echo handler message
+      listen: "my handler"
+
     - name: stop message
       debug:
-        msg: "stop {{ taskname }} task"
+        msg: stop task
+      listen: "my handler"
 
   
