@@ -14,8 +14,13 @@
       state: directory
 
   - debug:
+      msg: "{{ result }}"
+
+  - debug:
       msg: "{{ message }}"
+
   - debug:
       msg: "{{ hi }}"
+
   - debug:
       msg: "{{ hello }}"
