@@ -7,4 +7,5 @@
     register: login
 
   - debug:
-      var=login
+      msg="Loggen in as user {{ login.stdout }}"
+      #var=login
