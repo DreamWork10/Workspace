@@ -11,7 +11,7 @@
     - db1
     - db2
     - db3
-    tasks:
+   tasks:
     - debug:
         msg: "{{ item[0] }} - {{ item[1] }}"
       loop:
