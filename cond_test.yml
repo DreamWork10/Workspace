@@ -9,9 +9,6 @@
     ignore_errors: True
 
   - debug:
-      var=result
-
-  - debug:
       msg: "{{ result.stderr }}"
       when: result is failed
 
