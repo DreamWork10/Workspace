@@ -1,0 +1,19 @@
+---
+- name: loop test
+  hosts: 121.189.77.180
+  gather_facts: False
+  vars:
+    score: 95
+  tasks:
+  - name: scroe is excellent
+    shell: echo "grade excellent!!!"
+    register: grade
+    when: ( score|int >= 90 )
+
+  - name: score is fail
+    shell: echo "grade fail!!!"
+    register: grade
+    when: ( score|int < 60 )
+
+  - debug:
+      msg: "{[ grade }}"
