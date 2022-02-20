@@ -5,7 +5,7 @@
   vars:
     score: 95
   tasks:
-  - name: scroe is excellent
+  - name: score is excellent
     shell: echo "grade excellent!!!"
     register: grade
     when: ( score|int >= 90 )
