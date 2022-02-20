@@ -8,7 +8,7 @@
     dest_dir: /tmp
     file_name: hue-4.10.0
   vars_files:
-    - variable
+    - variablue
   tasks:
     # task
           - name: download hue file # 설명을 위한 식별자
