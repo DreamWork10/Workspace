@@ -4,12 +4,12 @@
   tasks:
   - name: Get stats of a file
     ansible.builtin.stat:
-      path: /etc/foo.conf
-      register: st      
+      path: /etc/hosts
+    register: st      
 
   - debug:
       var: st
-      
+
   - name: Fail if the file does not belong to 'root'
     ansible.builtin.fail:
       msg: "Whoops! file ownership has changed"
