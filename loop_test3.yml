@@ -3,7 +3,7 @@
   hosts: 121.189.77.180
   gather_facts: False
   vars:
-    user:
+    users:
     - user1
     - user2
     - user3
@@ -11,9 +11,9 @@
     - db1
     - db2
     - db3
-   tasks:
-    - debug:
-        msg: "{{ item[0] }} - {{ item[1] }}"
-      loop:
-      - "{{ user | product( dbs ) | list }}"
+  tasks:
+  - debug:
+      msg: "{{ item[0] }} - {{ item[1] }}"
+    loop:
+    - "{{ user | product( dbs ) | list }}"
      
