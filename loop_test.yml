@@ -4,8 +4,10 @@
   gather_facts: False
   tasks:
   - debug:
-      msg: "{{ item }}"
+      msg: "{{ item.user }} - {{ item.group }}"
     loop:
-    - a
-    - b
-    - c
+    - user: user1
+      group: group1
+    - user: user2
+      group: group2
+    
